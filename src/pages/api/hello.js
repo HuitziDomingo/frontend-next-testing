@@ -1,5 +1,6 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+export const loadPosts = async () => {
+  let res = await fetch('http://localhost:4000/users')
+  let data = await res.json()
 
-export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
+  return data
 }
